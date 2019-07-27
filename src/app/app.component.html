@@ -1,9 +1,9 @@
 <app-side-menu (changeValue)="change($event)"></app-side-menu>
 
 <!-- <div class="content"> -->
-  <app-main></app-main>
-  <!-- <h2>All In One</h2> -->
-  <!-- <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or
+<!-- <app-main [tabSelected]="tabSelected"></app-main> -->
+<!-- <h2>All In One</h2> -->
+<!-- <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or
     less.</p>
   <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the
     navigation links.</p>
@@ -11,3 +11,12 @@
 <!-- </div> -->
 
 
+<div class="content">
+  <h2>{{tabSelected}}</h2>
+  <div [ngSwitch]="tabSelected">
+    <div *ngSwitchCase="'hacker-news'">
+      <app-hacker-news></app-hacker-news>
+    </div>
+  </div>
+
+</div>
