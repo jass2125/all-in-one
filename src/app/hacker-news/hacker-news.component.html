@@ -1,6 +1,11 @@
 <div class="content">
 	<h2>Hacker News</h2>
 	<div *ngFor="let n of news">
-		<p class="title">{{ n.title }}</p>
+		<a href="{{n.url}}" target="_blank">
+			<h4 class="title">{{ n.title }}</h4>
+			<p class="subtitle">{{ n.kids?.length }}  Comentários</p>
+			<!-- <p class="subtitle">{{ n | json }} Comentários</p> -->
+
+		</a>
 	</div>
 </div>
