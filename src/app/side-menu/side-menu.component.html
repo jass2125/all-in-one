@@ -1,15 +1,15 @@
-<div class="sidebar">
+<ul class="sidebar">
 	<img src="../../assets/icon.png" alt="Icon">
 	<a>All in One</a>
 	<hr>
-	<a href="#home">Hacker News</a>
-	<a href="#news">Reddit</a>
-	<a href="#contact">Product Hunt</a>
-	<a href="#about">Slashdot</a>
-	<a href="#about">Design News</a>
-	<a href="#about">Github Trending</a>
-	<a href="#about">Medium</a>
-	<a href="#about">Lifehacker</a>
+	<li (click)="changeTab('hacker-news')">Hacker News</li>
+	<li>Reddit</li>
+	<li>Product Hunt</li>
+	<li>Slashdot</li>
+	<li>Design News</li>
+	<li>Github Trending</li>
+	<li>Medium</li>
+	<li>Lifehacker</li>
 	<hr>
 
 	<a href="#about">Settings</a>
@@ -17,8 +17,9 @@
 
 	<a href="#about">Install Chrome Extension</a>
 
-	<a href="http://www.hackerplan.com" target="_blank">&copy; HackerPlan</a>
-</div>
+	<a class="copyright" href="http://www.hackerplan.com" target="_blank">&copy; HackerPlan</a>
+	
+</ul>
 
 <!-- <div class="content">
 	<h2>Responsive Sidebar Example</h2>

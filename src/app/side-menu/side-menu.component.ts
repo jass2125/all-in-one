@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-side-menu',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideMenuComponent implements OnInit {
 
+  @Output()
+  public changeValue = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  changeTab($event) {
+    // console.log($event);
+    this.changeValue.emit($event);
+    
   }
 
 }
