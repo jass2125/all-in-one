@@ -10,8 +10,6 @@
 }
 
 .sidebar a {
-	// text-align: left;
-	
   font-size: 14px;
   display: block;
   color: #666;
@@ -19,20 +17,24 @@
   padding: 16px;
   text-decoration: none;
   width: 160px;
-	margin: 0 auto 0 auto;
-	padding: 6px;
+  margin: 0 auto 0 auto;
+  padding: 6px;
 }
 
 .sidebar img {
   display: block;
   margin: 30px auto;
-	opacity: .7;
-	// background-color: red;
+  opacity: 0.7;
+  line-height: 4px;
+}
+
+.sidebar a.active {
+  background-color: #4caf50;
+  color: white;
 }
 
 .sidebar hr {
-	margin: 15px auto 15px auto;
-	text-align: left;
+  margin: 24px auto 24px 83px;
   width: 200px;
   border: 1px solid #222;
   opacity: 0.1;
