@@ -18,7 +18,6 @@ export class AppComponent {
 
   public change(value){
     this.tabSelected = value
-    console.log(value);
     
   }
 }

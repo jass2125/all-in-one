@@ -3,9 +3,8 @@
 	<div *ngFor="let n of news">
 		<a href="{{n.url}}" target="_blank">
 			<h4 class="title">{{ n.title }}</h4>
-			<p class="subtitle">{{ n.kids?.length }}  Comentários</p>
-			<!-- <p class="subtitle">{{ n | json }} Comentários</p> -->
-
+			<p class="subtitle">{{ n.time }}</p>
+			<p class="subtitle">{{ n.kids?.length }} Comentários</p>
 		</a>
 	</div>
 </div>
