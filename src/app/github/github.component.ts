@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-github',
@@ -10,10 +10,10 @@ export class GithubComponent implements OnInit {
   
   private list: any = [];
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpService: HttpService) { }
 
   ngOnInit() {
-    this.httpClient.get('http://localhost:3000/api/github').subscribe((resp) => {
+    this.httpService.searchGithub().subscribe((resp) => {
       console.log(resp);
     this.list = resp;
     });

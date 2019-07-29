@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { DateService } from '../date.service';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-wall-street-journal',
@@ -12,11 +12,11 @@ export class WallStreetJournalComponent implements OnInit {
 
   private list: any = [];
 
-  constructor(private httpClient: HttpClient, private dateService: DateService) { }
+  constructor(private httpService: HttpService, 
+    private dateService: DateService) { }
 
   ngOnInit() {
-    this.httpClient.get('http://localhost:3000/api/wall-street-journal').subscribe((resp: any) => {
-      console.log(resp);
+    this.httpService.searchTechCrunch().subscribe((resp: any) => {
       for (let article of resp.articles) {
         article.publishedAt = this.dateService.formataStringData(new Date(article.publishedAt));
         this.list.push(article);

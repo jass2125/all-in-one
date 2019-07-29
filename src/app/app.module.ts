@@ -7,11 +7,11 @@ import { AppComponent } from './app.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { HackerNewsComponent } from './hacker-news/hacker-news.component';
 import { GithubComponent } from './github/github.component';
-import { LifeHackerComponent } from './life-hacker/life-hacker.component';
 import { WallStreetJournalComponent } from './wall-street-journal/wall-street-journal.component';
 import { BbcComponent } from './bbc/bbc.component';
 import { TechCrunchComponent } from './tech-crunch/tech-crunch.component';
 import { DateService } from './date.service';
+import { HttpService } from './http.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,6 @@ import { DateService } from './date.service';
     SideMenuComponent,
     HackerNewsComponent,
     GithubComponent,
-    LifeHackerComponent,
     WallStreetJournalComponent,
     BbcComponent,
     TechCrunchComponent
@@ -29,7 +28,7 @@ import { DateService } from './date.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ DateService ],
+  providers: [ DateService, HttpService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,9 +16,7 @@ export class SideMenuComponent implements OnInit {
   }
 
   changeTab($event) {
-    // console.log($event);
     this.changeValue.emit($event);
-    
   }
 
 }

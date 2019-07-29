@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DateService } from '../date.service';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-hacker-news',
@@ -12,19 +13,19 @@ export class HackerNewsComponent implements OnInit {
 
   public news: any = [];
 
-  constructor(private httpClient: HttpClient, private dateService: DateService) { }
+  constructor(private httpService: HttpService, private dateService: DateService) { }
 
   ngOnInit() {
-    this.httpClient.get('https://hacker-news.firebaseio.com/v0/topstories.json/').subscribe((response: any) => {
-      for (let n of response)
-        this.httpClient.get(`https://hacker-news.firebaseio.com/v0/item/${n}.json?print=pretty`).subscribe((resp: any) => {
+    this.httpService.searchHackerNews().subscribe((response: any) => {
+      for (let id of response)
+        this.httpService.searchByIdHackerNews(id).subscribe((resp: any) => {
           resp.time = this.dateService.formataStringData(new Date(resp.time * 1000));
           this.news.push(resp);
         });
     });
   }
 
-  
+
 }
 
 
