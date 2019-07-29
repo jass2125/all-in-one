@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { HackerNewsComponent } from './hacker-news/hacker-news.component';
 import { GithubComponent } from './github/github.component';
-import { MediumComponent } from './medium/medium.component';
 import { LifeHackerComponent } from './life-hacker/life-hacker.component';
 import { WallStreetJournalComponent } from './wall-street-journal/wall-street-journal.component';
 import { BbcComponent } from './bbc/bbc.component';
@@ -20,7 +19,6 @@ import { DateService } from './date.service';
     SideMenuComponent,
     HackerNewsComponent,
     GithubComponent,
-    MediumComponent,
     LifeHackerComponent,
     WallStreetJournalComponent,
     BbcComponent,
