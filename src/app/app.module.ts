@@ -12,6 +12,7 @@ import { LifeHackerComponent } from './life-hacker/life-hacker.component';
 import { WallStreetJournalComponent } from './wall-street-journal/wall-street-journal.component';
 import { BbcComponent } from './bbc/bbc.component';
 import { TechCrunchComponent } from './tech-crunch/tech-crunch.component';
+import { DateService } from './date.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { TechCrunchComponent } from './tech-crunch/tech-crunch.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ DateService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
