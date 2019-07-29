@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RedditComponent } from './reddit.component';
+import { MediumComponent } from './medium.component';
 
-describe('RedditComponent', () => {
-  let component: RedditComponent;
-  let fixture: ComponentFixture<RedditComponent>;
+describe('MediumComponent', () => {
+  let component: MediumComponent;
+  let fixture: ComponentFixture<MediumComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RedditComponent ]
+      declarations: [ MediumComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RedditComponent);
+    fixture = TestBed.createComponent(MediumComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

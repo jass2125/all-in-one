@@ -1,0 +1,11 @@
+<div class="content">
+	<h2>Github Trending</h2>
+	<div *ngFor="let n of list">
+		<a href="{{n.href}}" target="_blank">
+			<!-- <h4 class="title">{{ n | json }}</h4> -->
+			<h4 class="title">{{ n.name }}</h4>
+			<p class="subtitle">{{ n.language }}</p>
+			<p class="subtitle">{{ n.stars }} Stars</p>
+		</a>
+	</div>
+</div>

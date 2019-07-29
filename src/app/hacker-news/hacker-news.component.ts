@@ -15,9 +15,11 @@ export class HackerNewsComponent implements OnInit {
   private date: Date;
 
   ngOnInit() {
-    let date = new Date(1175714200);
-    console.log(date);
-
+    // this.httpClient.get('http://localhost:3000/api/hacker-news').subscribe((response: any) => {
+    //   this.news = response;
+    //   debugger;
+    // });
+    
     this.httpClient.get('https://hacker-news.firebaseio.com/v0/topstories.json/').subscribe((response: any) => {
       for (let n of response)
         this.httpClient.get(`https://hacker-news.firebaseio.com/v0/item/${n}.json?print=pretty`).subscribe((resp: any) => {
@@ -25,7 +27,6 @@ export class HackerNewsComponent implements OnInit {
           this.news.push(resp);
         });
     });
-
   }
 
   formataStringData(data) {
@@ -39,9 +40,9 @@ export class HackerNewsComponent implements OnInit {
 
     return [(dd > 9 ? '' : '0') + dd + "/" +
       (mm > 9 ? '' : '0') + mm,
-      data.getFullYear()
+    data.getFullYear()
     ]
-    .join('/');
+      .join('/');
   };
   // Utilizo o .slice(-2) para garantir o formato com 2 digitos.
 }

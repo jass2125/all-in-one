@@ -3,22 +3,17 @@
 	<a>All in One</a>
 	<hr>
 	<li (click)="changeTab('hacker-news')">Hacker News</li>
-	<li>Reddit</li>
-	<li>Product Hunt</li>
-	<li>Slashdot</li>
-	<li>Design News</li>
-	<li>Github Trending</li>
-	<li>Medium</li>
-	<li>Lifehacker</li>
+	<li (click)="changeTab('wall-street-journal')">Wall Street Journal</li>
+	<li (click)="changeTab('github')">Github Trending</li>
+	<li (click)="changeTab('bbc')">BBC</li>
+	<li (click)="changeTab('tech-crunch')">Tech Crunch</li>
+
 	<hr>
 
-	<a href="#about">Settings</a>
-	<hr>
-
-	<a href="#about">Install Chrome Extension</a>
+	<a href="https://chrome.google.com/webstore/detail/bnklinlebikadkjhgaekijmlecannfpm">Install Chrome Extension</a>
 
 	<a class="copyright" href="http://www.hackerplan.com" target="_blank">&copy; HackerPlan</a>
-	
+
 </ul>
 
 <!-- <div class="content">
